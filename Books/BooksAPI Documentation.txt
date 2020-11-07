@@ -1,0 +1,56 @@
+BOOKS API Specification Documentation  
+FLASK API with SQLite DATABASE
+
+Requirements:
+ 	Latest versions of
+		- Python3
+		- Flask
+		- sqlalchemy
+
+File Structure:
+	- Book
+		- __pycache__
+		- app.py
+		- model.py
+		- books-collection.db
+
+ __pycache__ and books-collection.db files will be automatically generated after running the app.py file.
+
+Run command:
+	python app.py
+
+View all books in database:
+	Method GET
+	Request URL http://localhost:8000/booksApi or http://localhost:8000/
+
+View all authors in database:
+	Method GET
+	Request URL http://localhost:8000/author
+
+Create a new author:
+	Method POST
+	Request URL http://localhost:8000/author
+	Params
+		author: Tolkien J.R.R.
+
+Create a new book:
+	Method POST
+	Request URL http://localhost:8000/booksApi
+	Params
+		title: Lord of the Rings
+		genre: Novel
+		author: Tolkien J.R.R.
+
+Get book by id:
+	Method GET
+	Request URL http://localhost:8000/booksApi/<int:id>
+
+Update book by id:
+	Method PUT
+	Request URL http://localhost:8000/booksApi/<int:id>
+	Params
+		genre: English Novel
+
+Delete book by id:
+	Method DELETE
+	Request URL http://localhost:8000/booksApi/<int:id>
